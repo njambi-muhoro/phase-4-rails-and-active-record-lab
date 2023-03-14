@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Student, type: :model do
-  let!(:student) { Student.new(first_name: 'Dwayne', last_name: 'Johnson', grade: 99) }
+  let!(:student) { Student.new(first_name: 'Dwayne', second_name: 'Johnson', grade: 99) }
 
   describe '#first_name' do
     it 'returns the student\'s first name' do
@@ -9,9 +9,9 @@ RSpec.describe Student, type: :model do
     end
   end
 
-  describe '#last_name' do
-    it 'returns the student\'s last name' do
-      expect(student.last_name).to eq('Johnson')
+  describe '#second_name' do
+    it 'returns the student\'s second name' do
+      expect(student.second_name).to eq('Johnson')
     end
   end
 
